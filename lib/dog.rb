@@ -44,5 +44,9 @@ class Dog
     end
 
     def self.find_by_id(id)
-      
+      sql = "SELECT * from students where id=?"
+      DB[:conn].execute(sql, id).map do |row|
+        self.create(name:row[1], breed:row[2] )
+      end
+    end
 end
