@@ -66,6 +66,8 @@ class Dog
       new_dog
     end
 
+    def self.find_by_name(name)
+      
     def self.new_from_db(row)
       Dog.new(row[0], row[1], row[2])
     end
