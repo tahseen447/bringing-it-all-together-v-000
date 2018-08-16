@@ -61,5 +61,6 @@ class Dog
       if dog.empty!
       else
         self.create(name:name, breed:breed)
+      end
+    end
 end
-
