@@ -54,4 +54,6 @@ class Dog
       sql = "UPDATE dogs set name = ?, breed= ? where id= ?"
       DB[:conn].execute(sql, self.name, self.breed, self.id)
     end
+
+    def self.find_or_create_by(name)
 end
