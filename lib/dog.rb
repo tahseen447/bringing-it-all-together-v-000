@@ -14,4 +14,5 @@ class Dog
       name TEXT,
       breed TEXT
     )
+    DB[:conn]
 end
