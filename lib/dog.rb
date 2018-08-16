@@ -70,7 +70,7 @@ class Dog
     def self.find_by_name(name)
       sql = "SELECT * from dogs where name=? limit 1"
       DB[:conn].execute(sql, name).map do |row|
-        self.create(name:row[1], breed:row[2] )
+        self.new_from_db(row)
       end.first
     end
 
